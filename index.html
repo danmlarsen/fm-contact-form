@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact form</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <main class="contact-us">
+            <form action="" class="contact-us__form">
+                <h1 class="contact-us__heading">Contact Us</h1>
+                <div class="contact-us__first-name">
+                    <label for="first-name">First Name</label>
+                    <input type="text" name="first-name" id="first-name" autocomplete="name" required />
+                    <p class="contact-us__validation-error"></p>
+                </div>
+                <div class="contact-us__last-name">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" name="last-name" id="last-name" autocomplete="name" required />
+                    <p class="contact-us__validation-error"></p>
+                </div>
+                <div class="contact-us__email">
+                    <label for="email">Email Address</label>
+                    <input type="email" name="email" id="email" autocomplete="email" required />
+                    <p class="contact-us__validation-error"></p>
+                </div>
+                <fieldset class="contact-us__query-type">
+                    <legend>Query Type</legend>
+                    <div>
+                        <input type="radio" name="query-type" id="query-type-radio-0" value="0" />
+                        <label for="query-type">General Enquiry</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="query-type" id="query-type-radio-1" value="1" />
+                        <label for="query-type">Support Request</label>
+                    </div>
+                    <p class="contact-us__validation-error"></p>
+                </fieldset>
+                <div class="contact-us__message">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message"></textarea>
+                    <p class="contact-us__validation-error"></p>
+                </div>
+                <div class="contact-us__callback">
+                    <input type="checkbox" name="callback" id="callback" aria-describedby="callback-instructions" />
+                    <p id="callback-instructions"></p>
+                    <p class="contact-us__validation-error"></p>
+                </div>
+                <div class="contact-us__submit">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
