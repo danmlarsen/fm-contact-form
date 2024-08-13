@@ -1,0 +1,43 @@
+.btn {
+    border: none;
+    background-color: $color-green-600;
+    color: $color-neutral-100;
+    font-weight: $fw-bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: $color-neutral-900;
+    }
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &--radio {
+        border: none;
+        font-size: var(--fs-500);
+        line-height: 1;
+
+        legend {
+            margin-bottom: 1.6rem;
+        }
+
+        label {
+            padding: 2rem;
+            border: 1px solid $color-neutral-900;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            cursor: pointer;
+        }
+
+        input[type='radio'] {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

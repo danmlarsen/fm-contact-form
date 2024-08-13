@@ -8,4 +8,47 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $color-neutral-900;
+    background-color: $color-green-200;
+    min-height: 100vh;
+    padding: 1.6rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img,
+picture,
+svg,
+canvas,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+textarea,
+option,
+button {
+    font: inherit;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 1.6rem 2.4rem;
+}
+
+ul[class] {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+    word-wrap: break-word;
 }

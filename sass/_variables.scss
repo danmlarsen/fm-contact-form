@@ -1,0 +1,20 @@
+// Colors
+$color-green-200: hsl(148, 38%, 91%);
+$color-green-600: hsl(169, 82%, 27%);
+$color-red: hsl(0, 66%, 54%);
+// Neutrals
+$color-neutral-100: hsl(0, 0%, 100%);
+$color-neutral-500: hsl(186, 15%, 59%);
+$color-neutral-900: hsl(187, 24%, 22%);
+
+// Typography
+$ff-primary: 'Karla', sans-serif;
+$fw-regular: 400;
+$fw-bold: 700;
+$fs-400: 1.6rem;
+$fs-500: 1.8rem;
+
+:root {
+    --fs-400: #{$fs-400};
+    --fs-500: #{$fs-500};
+}

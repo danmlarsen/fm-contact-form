@@ -1,0 +1,23 @@
+.contact-us {
+    width: 100%;
+    max-width: 42rem;
+    background-color: $color-neutral-100;
+    padding: 3.2rem;
+    border-radius: 19px;
+
+    &__form {
+        display: grid;
+        row-gap: 3.2rem;
+    }
+
+    &__message {
+        textarea {
+            height: 20rem;
+            resize: none;
+        }
+    }
+
+    &__callback {
+        flex-direction: row;
+    }
+}

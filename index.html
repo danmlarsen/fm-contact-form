@@ -11,41 +11,43 @@
         <main class="contact-us">
             <form action="" class="contact-us__form">
                 <h1 class="contact-us__heading">Contact Us</h1>
-                <div class="contact-us__first-name">
+                <div class="form-control contact-us__first-name">
                     <label for="first-name">First Name</label>
                     <input type="text" name="first-name" id="first-name" autocomplete="name" required />
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <div class="contact-us__last-name">
+                <div class="form-control contact-us__last-name">
                     <label for="last-name">Last Name</label>
                     <input type="text" name="last-name" id="last-name" autocomplete="name" required />
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <div class="contact-us__email">
+                <div class="form-control contact-us__email">
                     <label for="email">Email Address</label>
                     <input type="email" name="email" id="email" autocomplete="email" required />
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <fieldset class="contact-us__query-type">
+                <fieldset class="form-control form-control--radio contact-us__query-type">
                     <legend>Query Type</legend>
-                    <div>
-                        <input type="radio" name="query-type" id="query-type-radio-0" value="0" />
-                        <label for="query-type">General Enquiry</label>
-                    </div>
-                    <div>
-                        <input type="radio" name="query-type" id="query-type-radio-1" value="1" />
-                        <label for="query-type">Support Request</label>
+                        <label for="query-type-radio-0">
+                            <input type="radio" name="query-type" id="query-type-radio-0" value="0" />
+                            <span>General Enquiry</span>
+                        </label>
+
+                        <label for="query-type-radio-1">
+                            <input type="radio" name="query-type" id="query-type-radio-1" value="1" />
+                            <span>Support Request</span>
+                        </label>
                     </div>
                     <p class="contact-us__validation-error"></p>
                 </fieldset>
-                <div class="contact-us__message">
+                <div class="form-control contact-us__message">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message"></textarea>
+                    <textarea name="message" id="message" required></textarea>
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <div class="contact-us__callback">
-                    <input type="checkbox" name="callback" id="callback" aria-describedby="callback-instructions" />
-                    <p id="callback-instructions"></p>
+                <div class="form-control contact-us__callback">
+                    <input type="checkbox" name="callback" id="callback" aria-describedby="callback-instructions" required />
+                    <p id="callback-instructions">I consent to being contacted by the team</p>
                     <p class="contact-us__validation-error"></p>
                 </div>
                 <div class="contact-us__submit">
