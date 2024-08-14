@@ -18,6 +18,8 @@
     }
 
     &__query-type {
+        display: grid;
+
         border: none;
         line-height: 1;
 
@@ -50,6 +52,39 @@
 
         input[type='checkbox'] {
             flex-shrink: 0;
+        }
+    }
+
+    &__validation-error {
+        color: $color-red;
+    }
+}
+
+@media screen and (min-width: 64em) {
+    .contact-us {
+        max-width: 80rem;
+        padding: 4.2rem;
+
+        &__form {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1.2rem;
+        }
+
+        &__heading,
+        &__email,
+        &__query-type,
+        &__message,
+        &__callback,
+        &__submit {
+            grid-column: span 2;
+        }
+
+        &__query-type {
+            legend {
+                grid-column: span 2;
+            }
+
+            grid-template-columns: 1fr 1fr;
         }
     }
 }

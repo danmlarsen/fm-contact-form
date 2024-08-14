@@ -97,6 +97,26 @@ button {
   border-radius: 9px;
 }
 
+input[type=text]:hover, input[type=text]:active,
+input[type=email]:hover,
+input[type=email]:active,
+input[type=radio]:hover,
+input[type=radio]:active,
+input[type=checkbox]:hover,
+input[type=checkbox]:active,
+textarea:hover,
+textarea:active {
+  border-color: hsl(169, 82%, 27%);
+}
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=radio]:focus,
+input[type=checkbox]:focus,
+textarea:focus {
+  outline: 1px solid hsl(169, 82%, 27%);
+  outline-offset: 0;
+}
+
 input[type=radio] {
   appearance: none;
   display: grid;
@@ -107,7 +127,7 @@ input[type=radio] {
   cursor: pointer;
   width: 1.15em;
   height: 1.15em;
-  transition: 0.2 all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 input[type=radio]::before {
   content: "";
@@ -168,6 +188,11 @@ label[for*=checkbox] {
   margin-left: 1.2rem;
   color: hsl(169, 82%, 27%);
 }
+.form-control--invalid input[type=text],
+.form-control--invalid input[type=email],
+.form-control--invalid textarea {
+  border-color: hsl(0, 66%, 54%);
+}
 
 .contact-us {
   width: 100%;
@@ -185,6 +210,7 @@ label[for*=checkbox] {
   resize: none;
 }
 .contact-us__query-type {
+  display: grid;
   border: none;
   line-height: 1;
 }
@@ -212,6 +238,29 @@ label[for*=checkbox] {
 }
 .contact-us__callback input[type=checkbox] {
   flex-shrink: 0;
+}
+.contact-us__validation-error {
+  color: hsl(0, 66%, 54%);
+}
+
+@media screen and (min-width: 64em) {
+  .contact-us {
+    max-width: 80rem;
+    padding: 4.2rem;
+  }
+  .contact-us__form {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.2rem;
+  }
+  .contact-us__heading, .contact-us__email, .contact-us__query-type, .contact-us__message, .contact-us__callback, .contact-us__submit {
+    grid-column: span 2;
+  }
+  .contact-us__query-type {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-us__query-type legend {
+    grid-column: span 2;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

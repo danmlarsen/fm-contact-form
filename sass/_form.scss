@@ -10,6 +10,22 @@ button {
     border-radius: 9px;
 }
 
+input[type='text'],
+input[type='email'],
+input[type='radio'],
+input[type='checkbox'],
+textarea {
+    &:hover,
+    &:active {
+        border-color: $color-green-600;
+    }
+
+    &:focus {
+        outline: 1px solid $color-green-600;
+        outline-offset: 0;
+    }
+}
+
 input[type='radio'] {
     appearance: none;
     display: grid;
@@ -22,7 +38,7 @@ input[type='radio'] {
     width: 1.15em;
     height: 1.15em;
 
-    transition: 0.2 all ease-in-out;
+    transition: 0.2s all ease-in-out;
 
     &::before {
         content: '';
@@ -93,5 +109,13 @@ label[for*='checkbox'] {
         display: inline-block;
         margin-left: 1.2rem;
         color: $color-green-600;
+    }
+
+    &--invalid {
+        input[type='text'],
+        input[type='email'],
+        textarea {
+            border-color: $color-red;
+        }
     }
 }
