@@ -177,20 +177,20 @@ label[for*=checkbox] {
   cursor: pointer;
 }
 
-.form-control {
+.form-group {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-.form-control:has(> input:required) label::after, .form-control:has(input:required) legend::after, .form-control:has(> textarea:required) label::after {
+.form-group:has(> input:required) label::after, .form-group:has(input:required) legend::after, .form-group:has(> textarea:required) label::after {
   content: "*";
   display: inline-block;
   margin-left: 1.2rem;
   color: hsl(169, 82%, 27%);
 }
-.form-control--invalid input[type=text],
-.form-control--invalid input[type=email],
-.form-control--invalid textarea {
+.form-group--invalid input[type=text],
+.form-group--invalid input[type=email],
+.form-group--invalid textarea {
   border-color: hsl(0, 66%, 54%);
 }
 

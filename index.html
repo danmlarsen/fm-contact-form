@@ -11,22 +11,22 @@
         <main class="contact-us">
             <form action="" method="post" class="contact-us__form" novalidate>
                 <h1 class="contact-us__heading">Contact Us</h1>
-                <div class="form-control contact-us__first-name">
+                <div class="form-group contact-us__first-name">
                     <label for="first-name">First Name</label>
                     <input type="text" name="first-name" id="first-name" autocomplete="name" required />
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <div class="form-control contact-us__last-name">
+                <div class="form-group contact-us__last-name">
                     <label for="last-name">Last Name</label>
                     <input type="text" name="last-name" id="last-name" autocomplete="name" required />
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <div class="form-control contact-us__email">
+                <div class="form-group contact-us__email">
                     <label for="email">Email Address</label>
                     <input type="email" name="email" id="email" autocomplete="email" required />
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <fieldset class="form-control form-control--radio contact-us__query-type">
+                <fieldset class="form-group form-group--radio contact-us__query-type">
                     <legend class="u-margin-bottom-sm">Query Type</legend>
                     <label for="query-type-radio-0">
                             <input type="radio" name="query-type" id="query-type-radio-0" value="0" required />
@@ -40,12 +40,12 @@
                     </div>
                     <p class="contact-us__validation-error"></p>
                 </fieldset>
-                <div class="form-control contact-us__message">
+                <div class="form-group contact-us__message">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" required></textarea>
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <div class="form-control form-control--checkbox contact-us__callback">
+                <div class="form-group form-group--checkbox contact-us__callback">
                     <input type="checkbox" name="callback" id="callback-checkbox" aria-describedby="callback-instructions" required />
                     <label for="callback-checkbox">I consent to being contacted by the team</label>
                     <p class="contact-us__validation-error"></p>
