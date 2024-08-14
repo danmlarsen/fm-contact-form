@@ -200,6 +200,7 @@ label[for*=checkbox] {
   background-color: hsl(0, 0%, 100%);
   padding: 3.2rem;
   border-radius: 19px;
+  position: relative;
 }
 .contact-us__form {
   display: grid;
@@ -261,6 +262,35 @@ label[for*=checkbox] {
   .contact-us__query-type legend {
     grid-column: span 2;
   }
+}
+.success-message {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: max-content;
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(0, 0%, 100%);
+  padding: 3.2rem;
+  border: none;
+  border-radius: 9px;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+}
+.success-message__heading {
+  font-weight: 700;
+}
+.success-message__text {
+  color: hsl(186, 15%, 59%);
+  grid-column: span 2;
+}
+.success-message--show {
+  visibility: visible;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
