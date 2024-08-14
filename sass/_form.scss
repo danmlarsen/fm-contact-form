@@ -80,3 +80,18 @@ label[for*='radio'],
 label[for*='checkbox'] {
     cursor: pointer;
 }
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    &:has(> input:required) label::after,
+    &:has(input:required) legend::after,
+    &:has(> textarea:required) label::after {
+        content: '*';
+        display: inline-block;
+        margin-left: 1.2rem;
+        color: $color-green-600;
+    }
+}

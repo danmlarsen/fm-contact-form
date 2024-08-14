@@ -18,14 +18,24 @@
     }
 
     &__query-type {
+        border: none;
+        line-height: 1;
+
         label {
+            font-size: var(--fs-500);
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            cursor: pointer;
             border: 1px solid rgba($color-neutral-900, 0.4);
             border-radius: 9px;
 
-            transition: 0.2s background-color ease-in-out;
+            transition: 0.2s all ease-in-out;
 
             &:has(> input[type='radio']:checked) {
                 background-color: $color-green-200;
+                border-color: $color-green-600;
             }
         }
 
@@ -37,5 +47,9 @@
     &__callback {
         flex-direction: row;
         align-items: center;
+
+        input[type='checkbox'] {
+            flex-shrink: 0;
+        }
     }
 }
