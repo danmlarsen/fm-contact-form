@@ -21,16 +21,21 @@
         label {
             border: 1px solid rgba($color-neutral-900, 0.4);
             border-radius: 9px;
+
+            transition: 0.2s background-color ease-in-out;
+
+            &:has(> input[type='radio']:checked) {
+                background-color: $color-green-200;
+            }
+        }
+
+        input[type='radio'] {
+            font-size: $fs-400;
         }
     }
 
     &__callback {
         flex-direction: row;
-    }
-
-    input,
-    textarea {
-        border: 1px solid rgba($color-neutral-900, 0.4);
-        border-radius: 9px;
+        align-items: center;
     }
 }

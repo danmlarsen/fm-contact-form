@@ -3,6 +3,10 @@
   --fs-500: 1.8rem;
 }
 
+.u-margin-bottom-sm {
+  margin-bottom: 1.6rem;
+}
+
 *,
 *::before,
 *::after {
@@ -40,10 +44,6 @@ textarea,
 option,
 button {
   font: inherit;
-  display: block;
-  width: 100%;
-  border-radius: 5px;
-  padding: 1.6rem 2.4rem;
 }
 
 ul[class] {
@@ -95,9 +95,6 @@ body {
   font-size: var(--fs-500);
   line-height: 1;
 }
-.form-control--radio legend {
-  margin-bottom: 1.6rem;
-}
 .form-control--radio label {
   padding: 2rem;
   display: flex;
@@ -106,31 +103,76 @@ body {
   gap: 2rem;
   cursor: pointer;
 }
-.form-control--radio input[type=radio] {
+input[type=text],
+input[type=email],
+textarea,
+button {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 1.6rem 2.4rem;
+  border: 1px solid rgba(43, 66, 70, 0.4);
+  border-radius: 9px;
+}
+
+input[type=radio] {
+  appearance: none;
   display: grid;
   place-content: center;
-  margin: 0;
-  padding: 0;
-  appearance: none;
-  -webkit-appearance: none;
   color: currentColor;
-  border-color: rgba(43, 66, 70, 0.4);
+  border: 1px solid rgba(43, 66, 70, 0.4);
   border-radius: 50%;
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 1.15em;
+  height: 1.15em;
+  transition: 0.2 all ease-in-out;
 }
-.form-control--radio input[type=radio]::before {
+input[type=radio]::before {
   content: "";
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 0.65em;
+  height: 0.65em;
   border-radius: 100%;
   transform: scale(0);
   transition: 0.2s transform ease-in-out;
-  box-shadow: inset 3rem 0 hsl(169, 82%, 27%);
+  box-shadow: inset 1em 1em hsl(169, 82%, 27%);
 }
-.form-control--radio input[type=radio]:checked::before {
+input[type=radio]:checked::before {
   transform: scale(1);
+}
+input[type=radio]:checked {
+  border-color: hsl(169, 82%, 27%);
+}
+
+input[type=checkbox] {
+  appearance: none;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  border: 1px solid rgba(43, 66, 70, 0.4);
+  width: 1.15em;
+  height: 1.15em;
+  transition: 0.2s all ease-in-out;
+}
+input[type=checkbox]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 0.2s transform ease-in-out;
+  box-shadow: inset 1em 1em hsl(0, 0%, 100%);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+input[type=checkbox]:checked {
+  background-color: hsl(169, 82%, 27%);
+  border-color: hsl(169, 82%, 27%);
+}
+
+label[for*=radio],
+label[for*=checkbox] {
+  cursor: pointer;
 }
 
 .contact-us {
@@ -151,14 +193,17 @@ body {
 .contact-us__query-type label {
   border: 1px solid rgba(43, 66, 70, 0.4);
   border-radius: 9px;
+  transition: 0.2s background-color ease-in-out;
+}
+.contact-us__query-type label:has(> input[type=radio]:checked) {
+  background-color: hsl(148, 38%, 91%);
+}
+.contact-us__query-type input[type=radio] {
+  font-size: 1.6rem;
 }
 .contact-us__callback {
   flex-direction: row;
-}
-.contact-us input,
-.contact-us textarea {
-  border: 1px solid rgba(43, 66, 70, 0.4);
-  border-radius: 9px;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

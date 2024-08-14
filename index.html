@@ -27,7 +27,7 @@
                     <p class="contact-us__validation-error"></p>
                 </div>
                 <fieldset class="form-control form-control--radio contact-us__query-type">
-                    <legend>Query Type</legend>
+                    <legend class="u-margin-bottom-sm">Query Type</legend>
                     <label for="query-type-radio-0">
                             <input type="radio" name="query-type" id="query-type-radio-0" value="0" />
                             <span>General Enquiry</span>
@@ -45,9 +45,9 @@
                     <textarea name="message" id="message" required></textarea>
                     <p class="contact-us__validation-error"></p>
                 </div>
-                <div class="form-control contact-us__callback">
-                    <input type="checkbox" name="callback" id="callback" aria-describedby="callback-instructions" required />
-                    <p id="callback-instructions">I consent to being contacted by the team</p>
+                <div class="form-control form-control--checkbox contact-us__callback">
+                    <input type="checkbox" name="callback" id="callback-checkbox" aria-describedby="callback-instructions" required />
+                    <label for="callback-checkbox">I consent to being contacted by the team</label>
                     <p class="contact-us__validation-error"></p>
                 </div>
                 <div class="contact-us__submit">
