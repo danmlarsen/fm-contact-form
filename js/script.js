@@ -44,7 +44,7 @@ const formIsValid = function (form, validations) {
 
     if (!dataIsValid(key, data[key], validations)) {
       isValid = false;
-      let validationMessage = "This field is required.";
+      let validationMessage = "This field is required";
 
       if (key === "email")
         validationMessage = "Please enter a valid email address";
