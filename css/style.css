@@ -211,12 +211,12 @@ label[for*=checkbox] {
   height: 10rem;
   resize: none;
 }
-.contact-us__query-type {
+.contact-us__querytype {
   display: grid;
   border: none;
   line-height: 1;
 }
-.contact-us__query-type label {
+.contact-us__querytype label {
   font-size: var(--fs-500);
   padding: 2rem;
   display: flex;
@@ -227,19 +227,20 @@ label[for*=checkbox] {
   border-radius: 9px;
   transition: 0.2s all ease-in-out;
 }
-.contact-us__query-type label:has(> input[type=radio]:checked) {
+.contact-us__querytype label:has(> input[type=radio]:checked) {
   background-color: hsl(148, 38%, 91%);
   border-color: hsl(169, 82%, 27%);
 }
-.contact-us__query-type input[type=radio] {
+.contact-us__querytype input[type=radio] {
   font-size: 1.6rem;
 }
 .contact-us__callback {
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   align-items: center;
 }
-.contact-us__callback input[type=checkbox] {
-  flex-shrink: 0;
+.contact-us__callback p {
+  grid-column: span 2;
 }
 .contact-us__submit {
   margin-top: 2rem;
@@ -257,13 +258,13 @@ label[for*=checkbox] {
     grid-template-columns: 1fr 1fr;
     column-gap: 1.2rem;
   }
-  .contact-us__heading, .contact-us__email, .contact-us__query-type, .contact-us__message, .contact-us__callback, .contact-us__submit {
+  .contact-us__heading, .contact-us__email, .contact-us__querytype, .contact-us__message, .contact-us__callback, .contact-us__submit {
     grid-column: span 2;
   }
-  .contact-us__query-type {
+  .contact-us__querytype {
     grid-template-columns: 1fr 1fr;
   }
-  .contact-us__query-type legend {
+  .contact-us__querytype legend {
     grid-column: span 2;
   }
 }

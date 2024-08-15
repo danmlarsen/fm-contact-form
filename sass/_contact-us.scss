@@ -18,7 +18,7 @@
         }
     }
 
-    &__query-type {
+    &__querytype {
         display: grid;
 
         border: none;
@@ -48,11 +48,12 @@
     }
 
     &__callback {
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: min-content 1fr;
         align-items: center;
 
-        input[type='checkbox'] {
-            flex-shrink: 0;
+        p {
+            grid-column: span 2;
         }
     }
 
@@ -77,14 +78,14 @@
 
         &__heading,
         &__email,
-        &__query-type,
+        &__querytype,
         &__message,
         &__callback,
         &__submit {
             grid-column: span 2;
         }
 
-        &__query-type {
+        &__querytype {
             legend {
                 grid-column: span 2;
             }
