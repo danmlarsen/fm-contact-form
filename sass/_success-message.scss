@@ -6,9 +6,10 @@
 
     top: 0;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-500%);
 
     width: max-content;
+    max-width: 100%;
     background-color: $color-neutral-900;
     color: $color-neutral-100;
     padding: 3.2rem;
@@ -31,5 +32,11 @@
     &--show {
         visibility: visible;
         opacity: 1;
+
+        transform: translate(-50%, 0);
+
+        @media screen and (min-width: $bp-desktop) {
+            transform: translate(-50%, -100%);
+        }
     }
 }

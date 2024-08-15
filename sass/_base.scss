@@ -15,11 +15,15 @@ body {
     color: $color-neutral-900;
     background-color: $color-green-200;
     min-height: 100vh;
-    padding: 1.6rem;
+    padding: 3.2rem 1.6rem;
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
+    @media screen and (min-width: $bp-desktop) {
+        align-items: center;
+    }
 }
 
 img,

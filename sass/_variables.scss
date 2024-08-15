@@ -14,6 +14,9 @@ $fw-bold: 700;
 $fs-400: 1.6rem;
 $fs-500: 1.8rem;
 
+// Breakpoints
+$bp-desktop: 64rem;
+
 :root {
     --fs-400: #{$fs-400};
     --fs-500: #{$fs-500};

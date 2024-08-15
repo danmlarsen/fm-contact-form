@@ -24,10 +24,15 @@ body {
   color: hsl(187, 24%, 22%);
   background-color: hsl(148, 38%, 91%);
   min-height: 100vh;
-  padding: 1.6rem;
+  padding: 3.2rem 1.6rem;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+@media screen and (min-width: 64rem) {
+  body {
+    align-items: center;
+  }
 }
 
 img,
@@ -249,7 +254,7 @@ label[for*=checkbox] {
   color: hsl(0, 66%, 54%);
 }
 
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 64rem) {
   .contact-us {
     max-width: 75rem;
     padding: 4.2rem;
@@ -275,8 +280,9 @@ label[for*=checkbox] {
   align-items: center;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -100%);
+  transform: translate(-500%);
   width: max-content;
+  max-width: 100%;
   background-color: hsl(187, 24%, 22%);
   color: hsl(0, 0%, 100%);
   padding: 3.2rem;
@@ -296,6 +302,12 @@ label[for*=checkbox] {
 .success-message--show {
   visibility: visible;
   opacity: 1;
+  transform: translate(-50%, 0);
+}
+@media screen and (min-width: 64rem) {
+  .success-message--show {
+    transform: translate(-50%, -100%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
