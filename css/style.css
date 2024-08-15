@@ -77,6 +77,7 @@ body {
   border: none;
   background-color: hsl(169, 82%, 27%);
   color: hsl(0, 0%, 100%);
+  padding: 2rem 3.2rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -92,9 +93,9 @@ button {
   display: block;
   width: 100%;
   border-radius: 5px;
-  padding: 1.6rem 2.4rem;
+  padding: 1.2rem 2.4rem;
   border: 1px solid rgba(43, 66, 70, 0.4);
-  border-radius: 9px;
+  border-radius: 7px;
 }
 
 input[type=text]:hover, input[type=text]:active,
@@ -180,7 +181,7 @@ label[for*=checkbox] {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 .form-group:has(> input:required) label::after, .form-group:has(input:required) legend::after, .form-group:has(> textarea:required) label::after {
   content: "*";
@@ -204,10 +205,10 @@ label[for*=checkbox] {
 }
 .contact-us__form {
   display: grid;
-  row-gap: 3.2rem;
+  row-gap: 2rem;
 }
 .contact-us__message textarea {
-  height: 20rem;
+  height: 10rem;
   resize: none;
 }
 .contact-us__query-type {
@@ -220,7 +221,7 @@ label[for*=checkbox] {
   padding: 2rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.6rem;
   cursor: pointer;
   border: 1px solid rgba(43, 66, 70, 0.4);
   border-radius: 9px;
@@ -240,13 +241,16 @@ label[for*=checkbox] {
 .contact-us__callback input[type=checkbox] {
   flex-shrink: 0;
 }
+.contact-us__submit {
+  margin-top: 2rem;
+}
 .contact-us__validation-error {
   color: hsl(0, 66%, 54%);
 }
 
 @media screen and (min-width: 64em) {
   .contact-us {
-    max-width: 80rem;
+    max-width: 75rem;
     padding: 4.2rem;
   }
   .contact-us__form {

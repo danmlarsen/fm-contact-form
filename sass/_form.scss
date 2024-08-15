@@ -5,9 +5,9 @@ button {
     display: block;
     width: 100%;
     border-radius: 5px;
-    padding: 1.6rem 2.4rem;
+    padding: 1.2rem 2.4rem;
     border: 1px solid rgba($color-neutral-900, 0.4);
-    border-radius: 9px;
+    border-radius: 7px;
 }
 
 input[type='text'],
@@ -100,7 +100,7 @@ label[for*='checkbox'] {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1rem;
 
     &:has(> input:required) label::after,
     &:has(input:required) legend::after,

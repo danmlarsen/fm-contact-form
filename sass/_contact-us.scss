@@ -8,12 +8,12 @@
 
     &__form {
         display: grid;
-        row-gap: 3.2rem;
+        row-gap: 2rem;
     }
 
     &__message {
         textarea {
-            height: 20rem;
+            height: 10rem;
             resize: none;
         }
     }
@@ -29,7 +29,7 @@
             padding: 2rem;
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 1.6rem;
             cursor: pointer;
             border: 1px solid rgba($color-neutral-900, 0.4);
             border-radius: 9px;
@@ -56,6 +56,10 @@
         }
     }
 
+    &__submit {
+        margin-top: 2rem;
+    }
+
     &__validation-error {
         color: $color-red;
     }
@@ -63,7 +67,7 @@
 
 @media screen and (min-width: 64em) {
     .contact-us {
-        max-width: 80rem;
+        max-width: 75rem;
         padding: 4.2rem;
 
         &__form {
